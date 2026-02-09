@@ -21,6 +21,7 @@ target_include_directories(FlightSensorHub PRIVATE
 target_link_libraries(FlightSensorHub PRIVATE
     cmsis
     freertos
+    m
 )
 
 target_link_options(FlightSensorHub PRIVATE

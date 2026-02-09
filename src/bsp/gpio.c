@@ -37,5 +37,5 @@ void gpio_init(void)
 
     /* Push-pull, no pull-up/down for UART TX; pull-up for RX */
     GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPDR2 | GPIO_PUPDR_PUPDR3);
-    GPIOA->PUPDR |= (1U << GPIO_PUPDR_PUPDR3_Pos);  /* Pull-up on RX */
+    GPIOA->PUPDR |= (1U << GPIO_PUPDR_PUPDR3);  /* Pull-up on RX */
 }

@@ -2,6 +2,7 @@
 #include "sensor_task.h"
 #include "flight_data.h"
 #include "task.h"
+#include <math.h>
 
 /*
  * Barometric altitude conversion:
@@ -15,8 +16,6 @@
  *
  * Since we're using hardware FPU (Cortex-M4F), float math is fast.
  */
-
-#include <math.h>
 
 #define ADC_MAX         4095.0f
 #define PRESSURE_MIN    30.0f       /* kPa at ADC=0 */

@@ -81,6 +81,7 @@ void UART4_IRQHandler(void)             __attribute__((weak, alias("Default_Hand
 void UART5_IRQHandler(void)             __attribute__((weak, alias("Default_Handler")));
 void TIM6_DAC_IRQHandler(void)          __attribute__((weak, alias("Default_Handler")));
 void TIM7_IRQHandler(void)              __attribute__((weak, alias("Default_Handler")));
+void DMA2_Stream0_IRQHandler(void)      __attribute__((weak, alias("Default_Handler")));
 void DMA2_Stream1_IRQHandler(void)       __attribute__((weak, alias("Default_Handler")));
 void DMA2_Stream2_IRQHandler(void)       __attribute__((weak, alias("Default_Handler")));
 void DMA2_Stream3_IRQHandler(void)       __attribute__((weak, alias("Default_Handler")));
@@ -93,6 +94,7 @@ void OTG_FS_IRQHandler(void)            __attribute__((weak, alias("Default_Hand
 void DMA2_Stream5_IRQHandler(void)       __attribute__((weak, alias("Default_Handler")));
 void DMA2_Stream6_IRQHandler(void)       __attribute__((weak, alias("Default_Handler")));
 void DMA2_Stream7_IRQHandler(void)       __attribute__((weak, alias("Default_Handler")));
+void USART2_IRQHandler(void)            __attribute__((weak, alias("Default_Handler")));
 void USART6_IRQHandler(void)            __attribute__((weak, alias("Default_Handler")));
 void I2C3_EV_IRQHandler(void)           __attribute__((weak, alias("Default_Handler")));
 void I2C3_ER_IRQHandler(void)           __attribute__((weak, alias("Default_Handler")));
