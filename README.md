@@ -4,6 +4,10 @@ Bare-metal flight sensor hub for the STM32F446RE Nucleo board. Uses FreeRTOS for
 
 Simulated sensors: barometric altimeter and 3-axis accelerometer. Telemetry is transmitted as CRC-protected binary packets over UART2 at 115200 baud.
 
+## Motivation
+
+The aim of this project is to build out a flight sensor hub seen in most military devices like drones and satellites on an embedded board.
+
 ## Architecture
 
 ```
@@ -62,7 +66,7 @@ HSI 16 MHz → PLL → **180 MHz SYSCLK** (overdrive enabled)
 | 34 | 2 | Raw accel Z ADC |
 | 36 | 2 | CRC-16/CCITT-FALSE |
 
-## Prerequisites
+## Quick Start
 
 ### Toolchain
 
@@ -93,7 +97,7 @@ brew install arm-none-eabi-gcc
 - [stlink](https://github.com/stlink-org/stlink) (`st-flash`) **or**
 - [OpenOCD](https://openocd.org/)
 
-## Building
+## Usage
 
 ### Configure and Build
 
@@ -240,3 +244,7 @@ FlightSensorHub/
 - **Non-blocking queues**: Samples are dropped (not blocked on) if downstream is full
 - **Lock-free ring buffer**: UART ISR ↔ task communication without mutexes
 - **Hardware FPU**: Cortex-M4F single-precision FPU used for altitude/acceleration math
+
+## Contributing
+
+To contribute to this repository or creating their own fork, ensure to install the necessary dependencies and have the required hardware to make this work. 
